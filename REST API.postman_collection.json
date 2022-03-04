@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "44a33a14-072d-4f25-9e46-e8d8163a4327",
+		"name": "REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/hoteis",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hoteis",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hoteis"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Guarulhos",
+							"disabled": true
+						},
+						{
+							"key": "estrelas_min",
+							"value": "4.0",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "diaria_min",
+							"value": "600",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/confirmacao/{user_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/confirmacao/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"confirmacao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hoteis{hotel_id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NjE4MTA2OSwianRpIjoiNTg2NjkxZjEtN2QwYy00YjUyLWE4ZjUtYmM2MWQ5OTgzNGUxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjQ2MTgxMDY5LCJleHAiOjE2NDYxODE5Njl9.CNid8AsO73jiOSS50cF8gYCi6D-mAFIYcOAe81l60Po",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Luz\",\r\n    \"estrelas\": 2.9,\r\n    \"diaria\": 100.94,\r\n    \"cidade\": \"Rio de Janeiro\",\r\n    \"site_id\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/hoteis/luz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hoteis",
+						"luz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hoteis{hotel_id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NjE4MTA2OSwianRpIjoiNTg2NjkxZjEtN2QwYy00YjUyLWE4ZjUtYmM2MWQ5OTgzNGUxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjQ2MTgxMDY5LCJleHAiOjE2NDYxODE5Njl9.CNid8AsO73jiOSS50cF8gYCi6D-mAFIYcOAe81l60Po",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Japao\",\r\n    \"estrelas\": 2.9,\r\n    \"diaria\": 100.94,\r\n    \"cidade\": \"Rio de Janeiro\",\r\n    \"site_id\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/hoteis/japao",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hoteis",
+						"japao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hoteis{hotel_id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NTkyNjUzOCwianRpIjoiNjA2MDkxZGEtMTVkZC00Y2U5LTgwMDEtNjJkMDU3ODcyN2MyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ1OTI2NTM4LCJleHAiOjE2NDU5Mjc0Mzh9.oY7xkd3IwxRtfjNnTmY7XSnhc6fI55LCUQ1EMzNwt9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hoteis/tutoia",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hoteis",
+						"tutoia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/usuarios/{user_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/usuarios/{user_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuarios/{user_id}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"{user_id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"devid\",\r\n    \"senha\": \"views\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0NTkyNzk5MiwianRpIjoiNTc3YmRiZDQtZjY1ZS00MjJjLWFmMjEtZjU5ZTQ2MmY5YWRhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjQ1OTI3OTkyLCJleHAiOjE2NDU5Mjg4OTJ9.LMHrwQo2dWV9clBhVpR0chPu4r0umsBGVN7Nw5LewCI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cadastro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"devid\",\r\n    \"senha\": \"views\",\r\n    \"email\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/cadastro",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"cadastro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hoteis{hotel_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hoteis/echo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hoteis",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/sites",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"sites"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Guarulhos",
+							"disabled": true
+						},
+						{
+							"key": "estrelas_min",
+							"value": "4.0",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "diaria_min",
+							"value": "600",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sites/{url}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/sites/www.meusite.com.br",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"sites",
+						"www.meusite.com.br"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Guarulhos",
+							"disabled": true
+						},
+						{
+							"key": "estrelas_min",
+							"value": "4.0",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "diaria_min",
+							"value": "600",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sites/{url}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/sites/www.site4.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"sites",
+						"www.site4.com"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Guarulhos",
+							"disabled": true
+						},
+						{
+							"key": "estrelas_min",
+							"value": "4.0",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "diaria_min",
+							"value": "600",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sites/{url}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/sites/www.site4.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"sites",
+						"www.site4.com"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Guarulhos",
+							"disabled": true
+						},
+						{
+							"key": "estrelas_min",
+							"value": "4.0",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "diaria_min",
+							"value": "600",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
